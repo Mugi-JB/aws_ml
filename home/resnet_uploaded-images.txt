@@ -1,0 +1,83 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                    wolf_01.jpg  label:                       wolf
+ 2 key:                     mug_02.jpg  label:                        mug
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:                     Dog_01.jpg  label:                        dog
+
+     MATCH:
+
+                    mug_02.jpg: 
+Real:                        mug   Classifier:                     coffee mug
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              eskimo dog, husky
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:              eskimo dog, husky
+
+ NOT A MATCH:
+
+                   wolf_01.jpg: 
+Real:                       wolf   Classifier:   norwegian elkhound, elkhound
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+                    mug_02.jpg: 
+Real:                        mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                   wolf_01.jpg: 
+Real:                       wolf   Classifier:   norwegian elkhound, elkhound  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed: 100.0
+
+The CNN Model architecture used for this classification is: resnet
+
+N images clasified:    4 
+
+N of Dog Images:    2 
+
+N Not-Dog Images:    2
+
+Statistics Percentages.
+
+match     : 75.0%
+
+correct dogs: 100.0%
+
+correct breed: 100.0%
+
+correct notdogs: 50.0%
+
+INCORRECT Dog/NOT Dog Assignments:
+
+Real Label: wolf            Classifier Label: norwegian elkhound, elkhound
+
+** Total Elapsed Runtime: 0:0:1
